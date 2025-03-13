@@ -50,7 +50,7 @@ public class Garis {
     }
     // Menampilkan countGaris
     void printCounterGaris(){
-        System.out.println("Jumlah Objek Garis : " + this.counterGaris);
+        System.out.println("Jumlah Objek Garis : " + Garis.counterGaris);
     }
     // d. Method untuk mendapatkan panjang sebuah garis.
     double getPanjang(){

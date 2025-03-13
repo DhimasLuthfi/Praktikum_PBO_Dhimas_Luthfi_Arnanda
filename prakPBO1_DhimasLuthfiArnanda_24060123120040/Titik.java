@@ -54,7 +54,7 @@ public class Titik {
     }
     // Menampilkan countertitik
     void printCounterTitik(){
-        System.out.println("Jumlah Objek Titik : " + this.counterTitik);
+        System.out.println("Jumlah Objek Titik : " + Titik.counterTitik);
     }
     // Mendapatkan kuadran titik
     int getKuadran(){

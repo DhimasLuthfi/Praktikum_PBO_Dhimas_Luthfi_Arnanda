@@ -48,5 +48,6 @@ public class MTitik {
         System.out.println("Jarak T1 ke T3 : " + T1.getJarak(T3));
         
         
+        
     }
 }
