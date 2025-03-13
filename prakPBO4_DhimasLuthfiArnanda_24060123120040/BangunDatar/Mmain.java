@@ -12,7 +12,7 @@ public class Mmain {
         B1.setBorder("Hitam");
         B1.setWarna("Putih");
         B1.printInfo();
-        BangunDatar.printCounterBangunRuang();
+        BangunDatar.printCounterBangunDatar();
 
         System.out.println("========== Membuat Objek Persegi ==========");
         System.out.println("Persegi P1:");
@@ -22,7 +22,7 @@ public class Mmain {
         System.out.println("Diagonal: " + P1.getDiagonal());
         System.out.println("Keliling: " + P1.getKeliling());
         System.out.println("Luas: " + P1.getLuas());
-        BangunDatar.printCounterBangunRuang();
+        BangunDatar.printCounterBangunDatar();
 
         System.out.println("========= Membuat Objek Lingkaran =========");
         System.out.println("Lingkaran L1:");
@@ -33,7 +33,7 @@ public class Mmain {
         System.out.println("Jari-jari: " + L1.getJari());
         System.out.println("Keliling: " + L1.getKeliling());
         System.out.println("Luas: " + L1.getLuas());
-        BangunDatar.printCounterBangunRuang();
+        BangunDatar.printCounterBangunDatar();
 
     }
 }

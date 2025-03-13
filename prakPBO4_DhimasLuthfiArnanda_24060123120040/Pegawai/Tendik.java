@@ -33,17 +33,17 @@ public class Tendik extends pegawai {
         return bidang;
     }
 
-    // Menghitung BUP
+    // Menghitung BUP (tanggal lahir + 55 tahun + 1 bulan)
     public LocalDate hitungBUP() {
         return getTanggalLahir().plusYears(BUP).plusMonths(1);
     }
 
-    // Menghitung tunjangan
+    // Menghitung tunjangan (1% * tahun kerja * gaji pokok)
     public double hitungtunjangan() {
         return 0.01 * hitungMasaKerja()/12 * getgajiPokok();
     }
 
-    // Menampilkan Tendik
+    // Menampilkan detail Tendik
     @Override
     public void printInfo() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy"); 

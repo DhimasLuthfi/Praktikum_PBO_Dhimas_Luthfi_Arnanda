@@ -17,8 +17,11 @@ public class Persegi extends BangunDatar {
 
     // Konstruktor dengan parameter
     public Persegi(double sisi, String warna, String border) {
-        super(4, warna, border); // Memanggil konstruktor superclass
+        super(4, warna, border);
         this.sisi = sisi;
+        // this.jmlSisi = 4;
+        // this.warna = warna;
+        // this.border = border;
     }
 
     /* Selektor */

@@ -29,8 +29,7 @@ public class Dosen extends pegawai {
         return Fakultas;
     }
 
-
-    // Menampilkan dosen
+    // Menampilkan detail dosen
     @Override
     public void printInfo() {
         super.printInfo();

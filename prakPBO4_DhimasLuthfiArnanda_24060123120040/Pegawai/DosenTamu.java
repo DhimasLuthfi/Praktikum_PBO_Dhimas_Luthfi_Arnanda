@@ -43,17 +43,17 @@ public class DosenTamu extends Dosen {
         return kontrakKerja;
     }
 
-    // Menghitung BUP berdasarkan tanggal masuk dan durasi kontrak kerja
+    // Menghitung waktu berakhir kontak (Tanggal masuk + kontrakKerja)
     public LocalDate AkhirKontrak() {
         return TMT.plusMonths(kontrakKerja);
     }
 
-    // Menghitung tunjangan
+    // Menghitung tunjangan (2.5% * gaji pokok)
     public double hitungtunjangan() {
         return 0.025 * getgajiPokok();
     }
 
-    // Menampilkan Dosen Tamu
+    // Menampilkan detail Dosen Tamu
     @Override
     public void printInfo() {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy"); 

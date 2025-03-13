@@ -33,32 +33,38 @@ public class pegawai {
     }
 
     /* Selektor */
+    // Menampilkan NIP
     public String getNIP() {
         return NIP;
     }
 
-
+    // Menampilkan nama
     public String getNama() {
         return nama;
     }
 
+    // Menampilkan tanggal lahir
     public LocalDate getTanggalLahir() {
         return tanggalLahir;
     }
 
+    // Menampilkan terhitung Mulai tanggal (TMT)
     public LocalDate getTMT() {
         return TMT;
     }
 
+    // Menampilkan gajipokok
     public double getgajiPokok() {
         return gajiPokok;
     }
 
     /* Mutator */
+    // Mengubah nilai gaji pokok
     public void setGajiPokok(double gajiPokok) {
         this.gajiPokok = gajiPokok;
     }
 
+    // Menampilkan detail pegawai
     public void printInfo() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy");
         System.out.println("NIP           : " + NIP);
@@ -68,11 +74,13 @@ public class pegawai {
         System.out.println("Gaji Pokok    : Rp " + String.format("%,.2f", gajiPokok).replace(",", ".").replace(".", ","));
     }
 
+    // Menghitung masa kerja dalam bulan
     public int hitungMasaKerja() {
         Period masaKerja = Period.between(TMT, LocalDate.now());
         return masaKerja.getYears() * 12 + masaKerja.getMonths(); // Menghitung total bulan
     }
 
+    // Menghitung jumlah pegawai
     public static void printCountPegawai() {
         System.out.println("Jumlah Pegawai : " + countPegawai);
     }

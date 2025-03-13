@@ -31,17 +31,17 @@ public class DosenTetap extends Dosen {
         return NIDN;
     }
 
-    // Menghitung BUP
+    // Menghitung BUP (tahun lahir + 65 tahun + 1 bulan)
     public LocalDate hitungBUP() {
         return getTanggalLahir().plusYears(BUP).plusMonths(1);
     }
 
-    // Menghitung tunjangan
+    // Menghitung tunjangan (2% * tahun bekerja * gaji pokok)
     public double hitungtunjangan() {
         return 0.02 * hitungMasaKerja()/12 * getgajiPokok();
     }
 
-    // Menampilkan Dosen Tetap
+    // Menampilkan detail Dosen Tetap
     @Override
     public void printInfo() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy"); 
