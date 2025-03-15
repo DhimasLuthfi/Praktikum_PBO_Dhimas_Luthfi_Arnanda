@@ -75,7 +75,7 @@ public class pegawai {
     }
 
     // Menghitung masa kerja dalam bulan
-    public int hitungMasaKerja() {
+    public int gethitungMasaKerja() {
         Period masaKerja = Period.between(TMT, LocalDate.now());
         return masaKerja.getYears() * 12 + masaKerja.getMonths(); // Menghitung total bulan
     }

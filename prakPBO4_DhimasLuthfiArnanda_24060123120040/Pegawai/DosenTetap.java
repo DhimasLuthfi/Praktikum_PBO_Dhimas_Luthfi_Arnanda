@@ -32,13 +32,13 @@ public class DosenTetap extends Dosen {
     }
 
     // Menghitung BUP (tahun lahir + 65 tahun + 1 bulan)
-    public LocalDate hitungBUP() {
+    public LocalDate gethitungBUP() {
         return getTanggalLahir().plusYears(BUP).plusMonths(1);
     }
 
     // Menghitung tunjangan (2% * tahun bekerja * gaji pokok)
-    public double hitungtunjangan() {
-        return 0.02 * hitungMasaKerja()/12 * getgajiPokok();
+    public double gethitungTunjangan() {
+        return 0.02 * gethitungMasaKerja()/12 * getgajiPokok();
     }
 
     // Menampilkan detail Dosen Tetap
@@ -46,12 +46,12 @@ public class DosenTetap extends Dosen {
     public void printInfo() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d MMMM yyyy"); 
         super.printInfo();
-        System.out.println("Masa Kerja    : " + hitungMasaKerja()/12 + " tahun " + hitungMasaKerja()%12 + " bulan");
+        System.out.println("Masa Kerja    : " + gethitungMasaKerja()/12 + " tahun " + gethitungMasaKerja()%12 + " bulan");
         System.out.println("NIDN          : " + NIDN);
         System.out.println("Jabatan       : Dosen Tetap");
-        System.out.println("BUP           : " + hitungBUP().format(formatter));
-        System.out.println("Tunjangan     : 2%  x " + hitungMasaKerja()/12 + " x " + 
+        System.out.println("BUP           : " + gethitungBUP().format(formatter));
+        System.out.println("Tunjangan     : 2%  x " + gethitungMasaKerja()/12 + " x " + 
                             String.format("%,.2f", getgajiPokok()) + " = Rp " + 
-                            String.format("%,.2f", hitungtunjangan()));
+                            String.format("%,.2f", gethitungTunjangan()));
     }
 }

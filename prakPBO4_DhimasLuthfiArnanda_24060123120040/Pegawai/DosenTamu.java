@@ -44,12 +44,12 @@ public class DosenTamu extends Dosen {
     }
 
     // Menghitung waktu berakhir kontak (Tanggal masuk + kontrakKerja)
-    public LocalDate AkhirKontrak() {
+    public LocalDate getAkhirKontrak() {
         return TMT.plusMonths(kontrakKerja);
     }
 
     // Menghitung tunjangan (2.5% * gaji pokok)
-    public double hitungtunjangan() {
+    public double gethitungtunjangan() {
         return 0.025 * getgajiPokok();
     }
 
@@ -61,9 +61,9 @@ public class DosenTamu extends Dosen {
         System.out.println("NIDK          : " + NIDK);
         System.out.println("Jabatan       : Dosen Tamu");
         System.out.println("Durasi Kontrak: " + kontrakKerja + " bulan");
-        System.out.println("AkhirKontrak  : " + AkhirKontrak().format(formatter));
+        System.out.println("AkhirKontrak  : " + getAkhirKontrak().format(formatter));
         System.out.println("Tunjangan     : 2,5%  x " + 
                             String.format("%,.2f", getgajiPokok()) + " = Rp " + 
-                            String.format("%,.2f", hitungtunjangan()));
+                            String.format("%,.2f", gethitungtunjangan()));
     }
 }

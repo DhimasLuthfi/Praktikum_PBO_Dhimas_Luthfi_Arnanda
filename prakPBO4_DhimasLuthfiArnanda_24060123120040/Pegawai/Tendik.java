@@ -34,13 +34,13 @@ public class Tendik extends pegawai {
     }
 
     // Menghitung BUP (tanggal lahir + 55 tahun + 1 bulan)
-    public LocalDate hitungBUP() {
+    public LocalDate gethitungBUP() {
         return getTanggalLahir().plusYears(BUP).plusMonths(1);
     }
 
     // Menghitung tunjangan (1% * tahun kerja * gaji pokok)
     public double hitungtunjangan() {
-        return 0.01 * hitungMasaKerja()/12 * getgajiPokok();
+        return 0.01 * gethitungMasaKerja()/12 * getgajiPokok();
     }
 
     // Menampilkan detail Tendik
@@ -50,9 +50,9 @@ public class Tendik extends pegawai {
         super.printInfo();
         System.out.println("Bidang        : " + getBidang());
         System.out.println("Jabatan       : Tenaga Kependidikan");
-        System.out.println("Masa Kerja    : " + hitungMasaKerja()/12 + " tahun " + hitungMasaKerja()%12 + " bulan");
-        System.out.println("BUP           : " + hitungBUP().format(formatter));
-        System.out.println("Tunjangan     : 1%  x " + hitungMasaKerja()/12 + " x " + 
+        System.out.println("Masa Kerja    : " + gethitungMasaKerja()/12 + " tahun " + gethitungMasaKerja()%12 + " bulan");
+        System.out.println("BUP           : " + gethitungBUP().format(formatter));
+        System.out.println("Tunjangan     : 1%  x " + gethitungMasaKerja()/12 + " x " + 
                             String.format("%,.2f", getgajiPokok()) + " = Rp " + 
                             String.format("%,.2f", hitungtunjangan()));
     }
